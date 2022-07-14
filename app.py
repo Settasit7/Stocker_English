@@ -31,7 +31,7 @@ def function():
         st.write('##')
         st.write('1. Choose stock')
         st.write('##')
-        name = st.text_input('type ticker name', 'PTT.BK')
+        name = st.text_input('Type ticker name', 'PTT.BK')
         st.write('##')
         st.write('Thai stock: type ticker name followed by .BK')
         st.write('US stock: type ticker name')
@@ -52,7 +52,7 @@ def function():
         date3 = st.text_input('Until what date will the closing price will be predicted?', '2022-09-30')
         st.write('##')
         st.write('Remarks:')
-        st.write('Program will predict the closing price from the first day of data fetching until the date in the box above.')
+        st.write('Program will predict the closing price from the first day of data fetch until the date in the box above.')
 
     st.write('---')
 
@@ -146,10 +146,10 @@ def function():
 
         contact_form = '''
         <form action = 'https://formsubmit.co/44cb3e677835b6d430f0e09576b4dece' method = 'POST'>
-            <input type = 'text' name = 'name' placeholder = 'ชื่อ' required>
-            <input type = 'email' name = 'email' placeholder = 'อีเมล' required>
-            <textarea name = 'message' placeholder = 'ข้อความ' required></textarea>
-            <button type="submit">ส่ง</button>
+            <input type = 'text' name = 'name' placeholder = 'Name' required>
+            <input type = 'email' name = 'email' placeholder = 'Email' required>
+            <textarea name = 'message' placeholder = 'Message' required></textarea>
+            <button type="submit">Submit</button>
         </form>
         '''
 
