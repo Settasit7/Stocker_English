@@ -22,41 +22,41 @@ def function():
 
     st.write('---')
 
-    st.header('เริ่มการทำนาย')
+    st.header('Prediction start')
     st.write('##')
 
     column1, column2, column3 = st.columns(3)
 
     with column1:
         st.write('##')
-        st.write('1. เลือกหุ้น')
+        st.write('1. Choose stock')
         st.write('##')
-        name = st.text_input('กรอกชื่อย่อหุ้น', 'PTT.BK')
+        name = st.text_input('type ticker name', 'PTT.BK')
         st.write('##')
-        st.write('หุ้นไทย: กรอกชื่อย่อตามด้วย.BK')
-        st.write('หุ้นต่างประเทศ: กรอกชื่อย่อปกติ')
+        st.write('Thai stock: type ticker name followed by .BK')
+        st.write('US stock: type ticker name')
 
     with column2:
         st.write('##')
-        st.write('2. ดึงข้อมูล')
+        st.write('2. Fetch data')
         st.write('##')
-        date1 = st.text_input('ดึงข้อมูลมาตั้งแต่วันที่เท่าไหร่', '2022-01-01')
+        date1 = st.text_input('From what date will the data be fetched?', '2022-01-01')
         st.write('##')
-        st.write('หมายเหตุ:')
-        st.write('โปรแกรมจะดึงข้อมูลมาตั้งแต่วันที่ในช่องด้านบนจนถึงเมื่อวาน')
+        st.write('Remarks:')
+        st.write('Program will fetch data from the date in the box above until yesterday.')
 
     with column3:
         st.write('##')
-        st.write('3. ทำนายอนาคต')
+        st.write('3. Predict future')
         st.write('##')
-        date3 = st.text_input('ทำนายราคาปิดจนถึงวันที่เท่าไหร่', '2022-09-30')
+        date3 = st.text_input('Until what date will the closing price will be predicted?', '2022-09-30')
         st.write('##')
-        st.write('หมายเหตุ:')
-        st.write('โปรแกรมจะทำนายราคาปิดตั้งแต่วันแรกที่ดึงข้อมูลจนถึงวันที่ในช่องด้านบน')
+        st.write('Remarks:')
+        st.write('Program will predict the closing price from the first day of data fetching until the date in the box above.')
 
     st.write('---')
 
-    with st.spinner('แปป...'):
+    with st.spinner('2 secs...'):
 
         from datetime import date
 
@@ -117,9 +117,9 @@ def function():
         y2 = df4.values[: len(df0), 0]
         RMSE = math.sqrt(np.square(np.subtract(y1, y2)).mean())
 
-    st.success('เสร็จละ')
+    st.success('Done')
 
-    st.header('ผลการทำนาย')
+    st.header('Prediction results')
     st.write('##')
 
     st.plotly_chart(fig, use_container_width = True)
@@ -137,7 +137,7 @@ def function():
 
     local_css("style/style.css")
 
-    st.header('มาคุยกัน')
+    st.header('Come talk')
     st.write('##')
 
     col1, col2 = st.columns(2)
