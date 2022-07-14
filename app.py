@@ -52,7 +52,7 @@ def function():
         date3 = st.text_input('Until what date will the closing price will be predicted?', '2022-09-30')
         st.write('##')
         st.write('Remarks:')
-        st.write('Program will predict the closing price from the first day of data fetch until the date in the box above.')
+        st.write('Program will predict the closing price from the first day data fetched until the date in the box above.')
 
     st.write('---')
 
